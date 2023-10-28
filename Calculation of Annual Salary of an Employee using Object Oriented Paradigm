@@ -1,0 +1,43 @@
+#include <iostream>
+using namespace std;
+
+class Employee
+{
+public:
+	int hoursworkedweekly; // Hours worked in a week
+	int hourlyratedollars; // Per Hour How many $ are earned
+	int weeklyearnings;    // Earnings in a week
+	int weeksinayear = 52; // Weeks in a full year
+	int annualsalary;      // Annual salary of the person
+
+	inline void calculateAnnualSalary() // INLINE Function to calculate annual salary
+	{
+		cout << endl << "Please enter hours worked in a week and the hourly rate for working" << endl;
+
+		cin >> hoursworkedweekly;
+		cin >> hourlyratedollars;
+
+		weeklyearnings = hoursworkedweekly * hourlyratedollars;
+		annualsalary = weeksinayear * weeklyearnings;
+
+		cout << "The annual salary of this person is as follows: $" << annualsalary << endl;
+	}
+
+};
+
+int main()
+{
+	Employee e1;
+	e1.calculateAnnualSalary();
+
+	Employee e2;
+	e2.calculateAnnualSalary();
+
+	Employee e3;
+	e3.calculateAnnualSalary();
+
+	Employee e4;
+	e4.calculateAnnualSalary();
+
+	return 0;
+}
